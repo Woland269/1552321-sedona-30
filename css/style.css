@@ -221,7 +221,7 @@ body {
   background-color: var(--active-on-blue-button);
 }
 
-/************ CATALOG *************/
+/******************* CATALOG ********************/
 
 /* selection-filter */
 .selection-filter {
@@ -237,17 +237,47 @@ body {
   color: var(--basic-white);
 }
 
+.checkbox-on input:checked ~ span::before {
+  background-image: url(../img/bird.svg);
+}
+
+.selection-filter span {
+  position: relative;
+  padding-left: 2em;
+  box-sizing: border-box;
+}
+
+.selection-filter span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  border-radius: 15%;
+  border: 0.15em solid var(--basic-white);
+}
+
 /* scale-filter */
 .scale-filter-button {
   font: inherit;
+  font-size: 14px;
   line-height: 21px;
   text-align: center;
   color: var(--basic-white);
   text-transform: uppercase;
-  background-color: black;
+  background-color: transparent;
   width: 137px;
   height: 36px;
-  border: none;
+  border: 2px solid var(--basic-white);
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.scale-filter-button:hover,
+.scale-filter-button:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
 }
 
 /* results */
@@ -298,6 +328,21 @@ body {
   margin-right: 12px;
 }
 
+.sorting-button {
+  border: none;
+}
+
+.sorting-button:hover,
+.sorting-button:focus {
+  background-color: var(--basic-black);
+  outline: none;
+}
+
+.sorting-button:active {
+  background-color: var(--basic-blue);
+  outline: none;
+}
+
 /* accommodation-list */
 
 .hotel-titles {
@@ -338,7 +383,7 @@ body {
   text-align: center;
 }
 
-/* -----будут декоративные элементы в видео звезды ----- */
+/* -----будут декоративные элементы в виде звезды ----- */
 
 /* rating button */
 .info-button {
@@ -395,11 +440,6 @@ body {
   text-decoration: none;
 }
 
-.footer-copyright {
-  color: var(--basic-black);
-  text-decoration: none;
-}
-
 /* footer-social */
 
 .footer-social {
@@ -423,4 +463,11 @@ body {
 .social-list {
   color: black;
   list-style: none;
+}
+
+/* footer-copyright */
+
+.footer-copyright {
+  text-decoration: none;
+  color: var(--basic-black);
 }
