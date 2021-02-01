@@ -76,6 +76,8 @@ body {
 .description-headers {
   font-weight: 400;
   color: var(--description-headers);
+  margin: 0;
+  padding: 0;
 }
 
 /*       INDEX
@@ -116,7 +118,7 @@ body {
 .welcome {
   height: 509px;
   background-image: url(../img/background-photo.png);
-  background-size: 100%;
+  background-size: "";
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -124,21 +126,31 @@ body {
 .about-us h2 {
   font-size: 21px;
   text-align: center;
+  margin-bottom: 16.5px;
+  margin-top: 42px;
+}
+
+.about-us {
+  margin-bottom: 51px;
 }
 
 /* first-reason */
 
 .first-reason {
-
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-.reasons-colored {
+.first-reasons-colored {
   box-sizing: border-box;
   width: 400px;
   height: 256px;
   background-color: var(--basic-blue);
   color: var(--basic-white);
   padding-top: 47px;
+  order: -1;
 }
 
 .description-colored {
@@ -147,37 +159,78 @@ body {
 
 /* recommendations */
 
-.recommendations {
-}
-
 .recommendations-list {
   list-style: none;
   display: flex;
-  flex-flow: wrap;
-  justify-content: space-between;;
+  justify-content: center;
+}
+
+.recommendations-item {
+  width: 297px;
+}
+
+.food {
+  margin-right: 118px;
+  margin-left: 124px;
+}
+
+/* second-reasons */
+
+.second-reasons {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.second-reasons-colored {
+  box-sizing: border-box;
+  width: 400px;
+  height: 256px;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  padding-top: 47px;
 }
 
 /* other-reasons */
 
 .other-reasons {
+  margin-top: 0;
 }
 
 .reasons-list {
   list-style: none;
   display: flex;
   justify-content: center;
-  justify-content: space-between;
   background-color: var(--background-gray);
+  margin-top: -8px;
 }
 
 .reasons-item {
-  widows: 400px;
+  width: 258px;
   height: 256px;
-  box-sizing: border-box;
   padding-top: 47px;
+  box-sizing: border-box;
+}
+
+.road {
+  margin-right: 148px;
+  margin-left: 168px;
 }
 
 /* interested */
+
+.interested h2 {
+  margin-top: 50px;
+}
+
+.description-interested {
+  font-weight: 400;
+  color: var(--description-headers);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 48px;
+}
 
 .finding-hotels {
   width: 568px;
@@ -186,13 +239,16 @@ body {
   color: var(--basic-white);
   font-size: 21px;
   line-height: 26px;
-  box-sizing: border-box;
-  padding-top: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
 }
 
 .finding-hotels:hover,
 .finding-hotels:focus {
   background-color: var(--hover-on-brown-button);
+  outline: none;
 }
 
 .finding-hotels:active {
