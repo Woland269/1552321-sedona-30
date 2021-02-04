@@ -31,6 +31,7 @@
   --background-gray: #eee;
   --background-rating: #f2f2f2;
   --text-rating: #666;
+  --border-line-color: #e5e5e5;
 }
 
 /* Global */
@@ -342,14 +343,30 @@ body {
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
+  margin-top: 29px;
 }
 
 .results {
   text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border-line-color);
 }
 
 .results-list {
   list-style: none;
+  margin-top: 27px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.results-sorting {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 31px;
+  margin-left: 46px;
+  margin-right: 40px;
 }
 
 .results-button {
@@ -376,8 +393,10 @@ body {
 /* sorting */
 .sorting-list {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-end;
   list-style: none;
+  margin-right: 73px;
+  margin-top: /*Не понял как поднять сортировку без позиции и без маргин отрицательного */
 }
 
 .sorting-item {
@@ -400,6 +419,14 @@ body {
 }
 
 /* accommodation-list */
+
+.accommodation-list {
+  display: flex;
+}
+
+.accommodation-items {
+  margin-left: 29px;
+}
 
 .hotel-titles {
   font-size: 21px;
@@ -431,12 +458,81 @@ body {
 
 .rating {
   color: var(--text-rating);
-  background-color: var(--background-rating);
-  display: block;
-  width: 110px;
-  height: 27px;
-  margin-top: 10px;
-  text-align: center;
+  border: none;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+.rating-caption {
+  padding: 0;
+  margin-bottom: 0.5em;
+}
+
+/* rating-group */
+
+.rating-group-Amara {
+  position: relative;
+  width: 6em;
+  height: 2em;
+  background-image: url(../img/stars.svg);
+  background-size: 1.5em auto;
+  background-repeat: repeat-x;
+}
+
+.rating-group-Desert {
+  position: relative;
+  width: 4.5em;
+  height: 2em;
+  background-image: url(../img/stars.svg);
+  background-size: 1.5em auto;
+  background-repeat: repeat-x;
+}
+
+.rating-group-Villas {
+  position: relative;
+  width: 3em;
+  height: 2em;
+  background-image: url(../img/stars.svg);
+  background-size: 1.5em auto;
+  background-repeat: repeat-x;
+}
+
+/* rating stars */
+.rating-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 1.5em;
+  height: 1.5em;
+  appearance: none;
+  font-size: inherit;
+}
+
+.rating-stars:focus {
+  outline: none;
+}
+
+/* options */
+
+.rating-stars:nth-of-type(1) {
+  z-index: 5;
+  width: 2em;
+}
+
+.rating-stars:nth-of-type(2) {
+  z-index: 4;
+  width: 4em;
+}
+
+.rating-stars:nth-of-type(3) {
+  z-index: 3;
+  width: 6em;
+}
+
+.rating-stars:nth-of-type(4) {
+  z-index: 2;
+  width: 8em;
 }
 
 /* -----будут декоративные элементы в виде звезды ----- */
@@ -484,6 +580,14 @@ body {
 }
 
 /******* FOOTER *******/
+
+.main-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 111px;
+  margin-right: 138px;
+}
 
 .contacts {
   font-weight: 700;
