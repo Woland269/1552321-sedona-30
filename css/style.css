@@ -135,23 +135,22 @@ body {
   margin-bottom: 51px;
 }
 
-/* first-reason */
+/* reason */
 
-.first-reason {
+.reason {
   display: flex;
   justify-content: center;
   margin: 0;
   padding: 0;
 }
 
-.first-reasons-colored {
+.reasons-colored {
   box-sizing: border-box;
   width: 400px;
   height: 256px;
   background-color: var(--basic-blue);
   color: var(--basic-white);
   padding-top: 47px;
-  order: -1;
 }
 
 .description-colored {
@@ -173,24 +172,6 @@ body {
 .food {
   margin-right: 118px;
   margin-left: 124px;
-}
-
-/* second-reasons */
-
-.second-reasons {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-}
-
-.second-reasons-colored {
-  box-sizing: border-box;
-  width: 400px;
-  height: 256px;
-  background-color: var(--basic-blue);
-  color: var(--basic-white);
-  padding-top: 47px;
 }
 
 /* other-reasons */
@@ -281,14 +262,14 @@ body {
 /******************* CATALOG ********************/
 
 /* selection-filter */
-.selection-filter {
+.filter {
   background-image: url(../img/background.png);
   background-repeat: no-repeat;
   background-size: 100%;
   color: var(--basic-white);
 }
 
-.selection-filter legend {
+.filter legend {
   line-height: 21px;
   align-items: center;
   color: var(--basic-white);
@@ -298,13 +279,13 @@ body {
   background-image: url(../img/bird.svg);
 }
 
-.selection-filter span {
+.filter span {
   position: relative;
   padding-left: 2em;
   box-sizing: border-box;
 }
 
-.selection-filter span::before {
+.filter span::before {
   content: "";
   position: absolute;
   top: 0;
@@ -346,7 +327,7 @@ body {
   margin-top: 29px;
 }
 
-.results {
+.sorting {
   text-transform: uppercase;
   display: flex;
   flex-wrap: wrap;
@@ -391,6 +372,7 @@ body {
 }
 
 /* sorting */
+
 .sorting-list {
   display: flex;
   justify-content: flex-end;
@@ -405,16 +387,17 @@ body {
 
 .sorting-button {
   border: none;
+  background: none;
 }
 
 .sorting-button:hover,
 .sorting-button:focus {
-  background-color: var(--basic-black);
+  color: var(--basic-black);
   outline: none;
 }
 
 .sorting-button:active {
-  background-color: var(--basic-blue);
+  color: var(--basic-blue);
   outline: none;
 }
 
@@ -456,86 +439,7 @@ body {
 
 /* rating */
 
-.rating {
-  color: var(--text-rating);
-  border: none;
-  margin: 0 0 1em 0;
-  padding: 0;
-}
-
-.rating-caption {
-  padding: 0;
-  margin-bottom: 0.5em;
-}
-
 /* rating-group */
-
-.rating-group-Amara {
-  position: relative;
-  width: 6em;
-  height: 2em;
-  background-image: url(../img/stars.svg);
-  background-size: 1.5em auto;
-  background-repeat: repeat-x;
-}
-
-.rating-group-Desert {
-  position: relative;
-  width: 4.5em;
-  height: 2em;
-  background-image: url(../img/stars.svg);
-  background-size: 1.5em auto;
-  background-repeat: repeat-x;
-}
-
-.rating-group-Villas {
-  position: relative;
-  width: 3em;
-  height: 2em;
-  background-image: url(../img/stars.svg);
-  background-size: 1.5em auto;
-  background-repeat: repeat-x;
-}
-
-/* rating stars */
-.rating-stars {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  width: 1.5em;
-  height: 1.5em;
-  appearance: none;
-  font-size: inherit;
-}
-
-.rating-stars:focus {
-  outline: none;
-}
-
-/* options */
-
-.rating-stars:nth-of-type(1) {
-  z-index: 5;
-  width: 2em;
-}
-
-.rating-stars:nth-of-type(2) {
-  z-index: 4;
-  width: 4em;
-}
-
-.rating-stars:nth-of-type(3) {
-  z-index: 3;
-  width: 6em;
-}
-
-.rating-stars:nth-of-type(4) {
-  z-index: 2;
-  width: 8em;
-}
-
-/* -----будут декоративные элементы в виде звезды ----- */
 
 /* rating button */
 .info-button {
