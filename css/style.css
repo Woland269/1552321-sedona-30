@@ -1,15 +1,17 @@
 /* Fonts */
 
 @font-face {
-  font-family: "PT Sans", "Arial", sans-serif;
-  src: url("../fonts/PTSans.woff2") format("woff2"), url("../fonts/PTSans.woff") format("woff");
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans.woff2") format("woff2"),
+    url("../fonts/PTSans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "PT Sans", "Arial", sans-serif;
-  src: url("../fonts/PTSans-Bold.woff2") format("woff2"), url("../fonts/PTSans-Bold.woff") format("woff");
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -32,7 +34,8 @@
   --border-line-color: #e5e5e5;
   --wrapper-shadow: rgba(0, 1, 1, 0.2);
   --basic-white-03: rgba(255, 255, 255, 0.3);
-  --basic-grey: #dbbbbc;
+  --basic-grey: #bdbbbc;
+  --basic-grey-darken: #231f20;
 }
 
 /* Global */
@@ -187,38 +190,53 @@ body {
 
 /* recommendations */
 
-.recommendations-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-.recommendations-item {
-  width: 297px;
-}
-
 .headings-reasons-recommendations {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
+  margin: 30px 0 25px 0;
 }
 
-.food {
-  margin-right: 118px;
-  margin-left: 124px;
+.recommendations-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.recommendations-item {
+  position: relative;
+  padding: 132px 65px 82px 73px;
+}
+
+.recommendations-item::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%)
 }
 
 .home::before {
+  width: 75px;
+  height: 72px;
+  top: 60px;
   background-image: url("../img/home.svg");
   background-repeat: no-repeat;
 }
 
 .food::before {
+  width: 75px;
+  height: 70px;
+  top: 61px;
   background-image: url("../img/food.svg");
   background-repeat: no-repeat;
 }
 
 .suv::before {
+  width: 64px;
+  height: 77px;
+  top: 55px;
   background-image: url("../img/suv.svg");
   background-repeat: no-repeat;
 }
@@ -231,22 +249,16 @@ body {
 
 .reasons-list {
   list-style: none;
-  display: flex;
-  justify-content: center;
   background-color: var(--background-gray);
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .reasons-item {
-  width: 258px;
-  padding-top: 47px;
-  box-sizing: border-box;
-}
-
-.road {
-  margin-right: 148px;
-  margin-left: 168px;
+  width: 100%;
+  padding: 47px 77px 54px 97px;
 }
 
 /* interested */
@@ -557,8 +569,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 111px;
-  margin-right: 138px;
+  padding: 25px 138px 36px 111px;
 }
 
 .contacts {
@@ -574,27 +585,59 @@ body {
 
 /* footer-social */
 
-.footer-social {
-  text-align: center;
-}
-
-.social-button {
-  color: inherit;
-  text-decoration: none;
-}
-
-.social-button:hover,
-.social-button:focus {
-  background-color: var(--hover-on-blue-button);
-}
-
-.social-button:active {
-  background-color: var(--active-on-blue-button);
-}
-
 .social-list {
   color: var(--basic-black);
   list-style: none;
+  margin: 0 -6px -6px 0;
+  padding: 0;
+  display: flex;
+}
+
+.social-item {
+  margin: 0 6px 6px 0;
+}
+
+.social-link {
+  display: flex;
+  width: 46px;
+  height: 48px;
+  background-color: var(--basic-blue);
+  position: relative;
+}
+
+.social-link::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.social-link--tw::before {
+  background-image: url("../img/icon-tw.svg");
+}
+
+.social-link--fb::before {
+  background-image: url("../img/icon-fb.svg");
+}
+
+.social-link--yt::before {
+  background-image: url("../img/icon-yt.svg");
+}
+
+.social-link:hover {
+  background-color: var(--hover-on-blue-button);
+}
+
+.social-link:active {
+  background-color: var(--active-on-blue-button);
+}
+
+.social-link:active::before {
+  opacity: 0.3;
 }
 
 /* footer-copyright */
@@ -605,7 +648,7 @@ body {
 }
 
 .footer-copyright svg {
-  fill: #231f20;
+  fill: var(--basic-grey-darken);
 }
 
 .footer-copyright svg:hover {
