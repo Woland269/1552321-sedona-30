@@ -87,6 +87,7 @@ body {
 .main-header-logo {
   display: block;
   text-align: center;
+  margin: 0 0 -80px 0;
 }
 
 /*       INDEX
@@ -123,6 +124,9 @@ body {
   opacity: 30%;
 }
 
+.current--link:visited {
+  color: var(--basic-brown);
+}
 /* welcome */
 
 .welcome {
@@ -214,7 +218,7 @@ body {
   content: "";
   position: absolute;
   left: 50%;
-  transform: translateX(-50%)
+  transform: translateX(-50%);
 }
 
 .home::before {
@@ -353,7 +357,8 @@ body {
 .filter span {
   position: relative;
   padding-left: 2em;
-  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .filter span::before {
@@ -381,6 +386,7 @@ body {
   border: 2px solid var(--basic-white);
   box-sizing: border-box;
   border-radius: 2px;
+  outline: none;
 }
 
 .scale-filter-button:hover,
@@ -395,7 +401,7 @@ body {
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-black);
-  margin-top: 29px;
+  padding: 32px 46px 31px 73px;
 }
 
 .sorting {
@@ -407,7 +413,8 @@ body {
 
 .results-list {
   list-style: none;
-  margin-top: 27px;
+  margin: 0;
+  padding: 26px 0 36px 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -416,9 +423,7 @@ body {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  margin-top: 31px;
-  margin-left: 46px;
-  margin-right: 40px;
+  padding: 31px 40px 0 37px;
 }
 
 .results-button {
@@ -446,10 +451,11 @@ body {
 /* sorting */
 
 .sorting-list {
+  margin: 0;
   display: flex;
   justify-content: flex-end;
   list-style: none;
-  margin-right: 73px;
+  padding: 32px 0 36px 400px;
 }
 
 .sorting-item {
@@ -457,18 +463,25 @@ body {
 }
 
 .sorting-button {
+  outline: none;
+  background-color: inherit;
+  border: none;
+}
+
+.sorting-button svg {
+  fill: var(--basic-grey);
   border: none;
   background: none;
 }
 
-.sorting-button:hover,
-.sorting-button:focus {
-  color: var(--basic-black);
+.sorting-button svg:hover,
+.sorting-button svg:focus {
+  fill: var(--basic-black);
   outline: none;
 }
 
-.sorting-button:active {
-  color: var(--basic-blue);
+.sorting-button svg:active {
+  fill: var(--basic-blue);
   outline: none;
 }
 
@@ -514,6 +527,18 @@ body {
 }
 
 /* rating */
+
+.rating {
+  display: block;
+  width: 110px;
+  height: 27px;
+  font-size: 14px;
+  line-height: 21px;
+  background-color: var(--background-rating);
+  text-align: center;
+  color: var(--text-rating);
+  margin: 5px;
+}
 
 /* rating-group */
 
