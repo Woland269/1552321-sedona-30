@@ -30,9 +30,7 @@
               <a class="site-navigation__link" href="blank.html">Карта штата</a>
             </li>
             <li>
-              <a class="site-navigation__link current--link" href="catalog.html"
-                >Гостиницы</a
-              >
+              <a class="site-navigation__link current--link">Гостиницы</a>
             </li>
           </ul>
         </nav>
@@ -73,7 +71,7 @@
                 <span>Wi-fi</span>
               </label>
             </fieldset>
-            <fieldset>
+            <fieldset class="infrastructure scale--filter">
               <legend class="filter__legend">Тип жилья:</legend>
               <label class="checkbox-on">
                 <input type="checkbox" class="visually-hidden" checked />
@@ -90,7 +88,7 @@
             </fieldset>
 
             <fieldset class="scale-filter">
-              <legend class="filter__legend">Стоимость в сутки</legend>
+              <legend class="filter__legend">Стоимость в сутки (Р):</legend>
               <label>
                 <span>От</span>
                 <input type="text" name="start-price" placeholder="0" />
@@ -100,34 +98,32 @@
                 <input type="text" name="stop-price" placeholder="3000" />
               </label>
               <div class="range"></div>
+              <button class="scale-filter-button" type="submit">
+                Показать
+              </button>
             </fieldset>
-            <button class="scale-filter-button" type="submit">Показать</button>
           </form>
         </section>
 
         <section class="sorting">
           <h2 class="visually-hidden">Сортировка</h2>
-          <span class="finding">Найдено:3</span>
-          <span class="results-sorting">Сортировка</span>
+          <span class="finding">Найдено: 3</span>
+          <span class="results-sorting">Сортировка:</span>
           <ul class="results-list">
             <li class="results-item">
-              <a href="#" class="results-button">По&nbsp;цене</a>
+              <a href="#" class="results-link active">По&nbsp;цене</a>
             </li>
             <li class="results-item">
-              <a href="#" class="results-button">По&nbsp;типу</a>
+              <a href="#" class="results-link">По&nbsp;типу</a>
             </li>
             <li class="results-item">
-              <a href="#" class="results-button">По&nbsp;названию</a>
+              <a href="#" class="results-link">По&nbsp;рейтингу</a>
             </li>
           </ul>
 
           <ul class="sorting-list">
             <li class="sorting-item">
-              <button
-                class="sorting-button"
-                type="button"
-                title="По возрастанию"
-              >
+              <a href="#" class="sorting-link" title="По возрастанию">
                 <svg
                   width="11"
                   height="10"
@@ -137,10 +133,10 @@
                 >
                   <path d="M5.5 0L0 10H11L5.5 0Z" />
                 </svg>
-              </button>
+              </a>
             </li>
             <li>
-              <button class="sorting-button" type="button" title="По убыванию">
+              <a href="#" class="sorting-link active" title="По убыванию">
                 <svg
                   width="11"
                   height="10"
@@ -150,7 +146,7 @@
                 >
                   <path d="M5.5 10L0 0H11" />
                 </svg>
-              </button>
+              </a>
             </li>
           </ul>
         </section>
@@ -177,7 +173,9 @@
                   <a class="info-link" href="product.html">Подробнее</a>
                   <a class="booking-link" href="product.html">Забронировать</a>
                 </div>
-                <span class="star-rate"></span>
+              </div>
+              <div class="star">
+                <div class="star-block star-block--for-star"></div>
                 <span class="rating">Рейтинг 8,5</span>
               </div>
             </li>
@@ -201,7 +199,9 @@
                   <a class="info-link" href="product.html">Подробнее</a>
                   <a class="booking-link" href="product.html">Забронировать</a>
                 </div>
-                <span class="star-rate"></span>
+              </div>
+              <div class="star">
+                <div class="star-block star-block--three-star"></div>
                 <span class="rating">Рейтинг 8,9</span>
               </div>
             </li>
@@ -225,7 +225,9 @@
                   <a class="info-link" href="product.html">Подробнее</a>
                   <a class="booking-link" href="product.html">Забронировать</a>
                 </div>
-                <span class="star-rate"></span>
+              </div>
+              <div class="star">
+                <div class="star-block star-block--two-star"></div>
                 <span class="rating">Рейтинг 9,2</span>
               </div>
             </li>
