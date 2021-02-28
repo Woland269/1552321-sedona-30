@@ -18,18 +18,18 @@
         /></a>
         <nav class="main-navigation">
           <ul class="site-navigation">
-            <li>
+            <li class="navigation-items">
               <a class="site-navigation__link" href="blank.html">Информация</a>
             </li>
-            <li>
+            <li class="navigation-items">
               <a class="site-navigation__link" href="blank.html"
                 >Фото и видео</a
               >
             </li>
-            <li>
+            <li class="navigation-items">
               <a class="site-navigation__link" href="blank.html">Карта штата</a>
             </li>
-            <li>
+            <li class="navigation-items">
               <a class="site-navigation__link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
@@ -103,9 +103,7 @@
               alt="Мост дьявола"
             />
             <div class="reasons-colored">
-              <h3 class="headings-colored second-colored">
-                Там есть мост дьявола
-              </h3>
+              <h3 class="headings-colored">Там есть мост дьявола</h3>
               <span> — №2 —</span>
               <p class="description-colored">
                 Да, по нему можно пройти! Если конечно вы осмелитесь
@@ -152,17 +150,103 @@
             <div class="interested-item">
               <label>
                 <span>Дата заезда:</span>
-                <input type="text" name="date" placeholder="24 Апреля 2017" />
+                <input
+                  type="text"
+                  name="arrival-date__link"
+                  value="24 Апреля 2017"
+                />
+                <a class="arrival-date__link" href="#">
+                  <span class="icon-calendar"></span>
+                </a>
               </label>
             </div>
             <div class="interested-item">
               <label>
                 <span>Дата выезда:</span>
-                <input type="text" name="date" placeholder="4 Июля 2017" />
+                <input type="text" name="date-departure" value="4 Июля 2017" />
+                <a class="date-departure__link" href="#">
+                  <span class="icon-calendar"></span>
+                </a>
               </label>
             </div>
-            <p class="interested-item">Взрослые:</p>
-            <p class="interested-item">Дети:</p>
+            <div class="guests">
+              <label> <span class="interested-item">Взрослые:</span></label>
+              <button type="button" name="minus">
+                <span class="minus-icon"
+                  ><svg
+                    width="12"
+                    height="3"
+                    viewBox="0 0 12 3"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="12" height="3" fill="#A9A9A9" />
+                  </svg>
+                </span>
+              </button>
+              <input
+                class="finding-icon"
+                type="text"
+                name="amount-adults"
+                value="2"
+              />
+              <button type="button" name="plus">
+                <span class="plus-button"
+                  ><svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                      fill="#A9A9A9"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <label> <span class="interested-item">Дети:</span></label>
+              <button type="button" name="minus">
+                <span class="minus-icon"
+                  ><svg
+                    width="12"
+                    height="3"
+                    viewBox="0 0 12 3"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect width="12" height="3" fill="#A9A9A9" />
+                  </svg>
+                </span>
+              </button>
+              <input
+                class="finding-icon"
+                type="text"
+                name="amount-child"
+                value="0"
+              />
+              <button type="button" name="plus">
+                <span class="plus-button"
+                  ><svg
+                    width="11"
+                    height="11"
+                    viewBox="0 0 11 11"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                      fill="#A9A9A9"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
             <button class="search-button" type="submit">Найти</button>
           </form>
           <div class="map">
