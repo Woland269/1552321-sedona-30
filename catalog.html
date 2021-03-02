@@ -42,43 +42,45 @@
             <legend class="filter__legend">Инфраструктура:</legend>
             <label class="checkbox-on">
               <input type="checkbox" class="visually-hidden" name="infrastructure" value="swimming-pool" checked />
-              <span>Бассейн</span>
+              <span class="checkbox--span">Бассейн</span>
             </label>
             <label class="checkbox-on">
               <input type="checkbox" class="visually-hidden" name="infrastructure" value="parking" />
-              <span>Парковка</span>
+              <span class="checkbox--span">Парковка</span>
             </label>
             <label class="checkbox-on">
               <input type="checkbox" class="visually-hidden" name="infrastructure" value="wi-fi" />
-              <span>Wi-fi</span>
+              <span class="checkbox--span">Wi-fi</span>
             </label>
           </fieldset>
           <fieldset class="infrastructure scale--filter">
             <legend class="filter__legend">Тип жилья:</legend>
             <label class="checkbox-on">
               <input type="checkbox" class="visually-hidden" checked />
-              <span>Гостиница</span>
+              <span class="checkbox--span">Гостиница</span>
             </label>
             <label class="checkbox-on">
               <input type="checkbox" class="visually-hidden" checked />
-              <span>Мотель</span>
+              <span class="checkbox--span">Мотель</span>
             </label>
             <label class="checkbox-on">
               <input type="checkbox" class="visually-hidden" checked />
-              <span>Апартаменты</span>
+              <span class="checkbox--span">Апартаменты</span>
             </label>
           </fieldset>
 
           <fieldset class="scale-filter">
-            <legend class="filter__legend">Стоимость в сутки (Р):</legend>
-            <label>
+            <legend class="filter__legend scale--legend">Стоимость в сутки (Р):</legend>
+            <div class="filter-price">
+            <label class="cost-from">
               <span>От</span>
               <input type="text" name="start-price" placeholder="0" />
             </label>
-            <label>
+            <label class="cost-to">
               <span>До</span>
               <input type="text" name="stop-price" placeholder="3000" />
             </label>
+          </div>
             <div class="range"></div>
             <button class="scale-filter-button" type="submit">
               Показать

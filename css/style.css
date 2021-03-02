@@ -46,11 +46,13 @@
 }
 
 html {
+  height: 100%;
   box-sizing: border-box;
 }
 
 body {
   width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -60,11 +62,7 @@ body {
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--background-rating);
-
   min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
 }
 
 .visually-hidden {
@@ -83,10 +81,13 @@ body {
 }
 
 .page-wrapper {
+  min-height: 100%;
   width: 1200px;
   margin: 0 auto;
   background-color: var(--basic-white);
   box-shadow: 0 5px 15px var(--wrapper-shadow);
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 .main-header-logo {
@@ -449,7 +450,7 @@ body {
 
 /* selection-filter */
 .filter {
-  padding: 26px 0 0 0;
+  padding: 26px 60px 2px 60px;
   background-image: url("../img/background.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -465,20 +466,25 @@ body {
   margin-bottom: 16px;
 }
 
+.scale--legend {
+margin-bottom: 6px;
+}
+
 .checkbox-on input:checked ~ span::after {
   background-image: url("../img/bird.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.filter span {
+.checkbox--span {
   position: relative;
   padding-left: 40px;
   font-size: 14px;
   line-height: 21px;
+  cursor: pointer;
 }
 
-.filter span::before {
+.checkbox--span::before {
   content: "";
   position: absolute;
   top: 0;
@@ -489,7 +495,7 @@ body {
   border: 2px solid var(--basic-white);
 }
 
-.filter span::after {
+.checkbox--span::after {
   content: "";
   position: absolute;
   width: 23px;
@@ -504,7 +510,7 @@ body {
   flex-direction: column;
   width: 20%;
   border: none;
-  margin-right: 58px;
+  margin-right: 37px;
 }
 
 .checkbox-on {
@@ -513,17 +519,53 @@ body {
 
 .filter form {
   display: flex;
-  padding: 0 0 2px 60px;
 }
 
 /* scale-filter */
 .scale-filter {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   border: none;
   outline: none;
+  width: 317px;
+  margin-left: auto;
 }
 
-.scale--filter {
-  margin-right: 288px;
+.filter-price {
+  position: relative;
+  display: flex;
+  width: 317px;
+  border: 1px solid var(--basic-white);
+  padding: 4px;
+
+}
+
+.filter-price input {
+  width: 50px;
+  color: var(--basic-white);
+  border: none;
+  background: none;
+  outline: none;
+  line-height: 21px;
+  font-size: 14px;
+}
+
+.filter-price::after {
+  position: absolute;
+  left: 50%;
+  top: 5px;
+  height: 22px;
+  content: "";
+  border: 1px solid #ffffff;
+}
+
+.cost-from {
+  padding-left: 65px;
+}
+
+.cost-to {
+  padding-left: 77px;
 }
 
 .scale-filter-button {
@@ -540,7 +582,8 @@ body {
   box-sizing: border-box;
   border-radius: 2px;
   outline: none;
-  margin: 29px 0 0 84px;
+  margin: 55px auto 0 auto;
+  cursor: pointer;
 }
 
 .scale-filter-button:hover,
