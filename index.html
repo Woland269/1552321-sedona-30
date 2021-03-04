@@ -122,7 +122,7 @@
         <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
         <p class="interested-heading">Заинтересовались?</p>
         <p class="description-interested">
-          Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
+          Укажите предполагаемые даты поездки,<br />и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
 
@@ -131,65 +131,53 @@
         <form class="interested-form" action="index.html" method="get">
           <div class="interested-item">
             <label class="date-of-arrival">
-              <span class="date-span">Дата заезда:</span>
+              <span class="date-span all--form-span">Дата заезда:</span>
               <input class="date__input" type="text" name="arrival-date__link" value="24 Апреля 2017" />
               <a class="arrival-date__link" href="#">
-                <span class="icon-calendar"></span>
               </a>
             </label>
           </div>
           <div class="interested-item">
-            <label class="date-of-departure">
-              <span class="date-span">Дата выезда:</span>
+            <label class="date-of-departure" for="date-departure">
+              <span class="date-span all--form-span">Дата выезда:</span>
               <input class="date__input" type="text" name="date-departure" value="4 Июля 2017" />
               <a class="date-departure__link" href="#">
-                <span class="icon-calendar"></span>
               </a>
             </label>
           </div>
           <div class="amount-guests">
             <label for="amount">
-              <span class="interested-item">Взрослые:</span></label>
+              <span class="interested-item all--form-span">Взрослые:</span></label>
             <div class="adults-of-amount">
-              <button type="button" name="minus">
-                <span class="minus-icon"><svg width="12" height="3" viewBox="0 0 12 3" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect width="12" height="3" fill="#A9A9A9" />
-                  </svg>
-                </span>
+              <button class="minus-icon" type="button" name="minus">
+                <svg width="12" height="3" viewBox="0 0 12 3" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="12" height="3" />
+                </svg>
               </button>
               <input class="finding-icon" type="text" name="amount-adults" value="2" id="amount" />
-              <button type="button" name="plus">
-                <span class="plus-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
-                      fill="#A9A9A9" />
-                  </svg>
-                </span>
+              <button class="plus-icon" type="button" name="plus">
+                <svg width="11" height="11" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" />
+                </svg>
               </button>
             </div>
           </div>
           <div class="child-guests">
             <label for="child">
-              <span class="interested-item">Дети:</span></label>
+              <span class="interested-item all--form-span">Дети:</span></label>
             <div class="adults-of-child">
-              <button type="button" name="minus">
-                <span class="minus-icon"><svg width="12" height="3" viewBox="0 0 12 3" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect width="12" height="3" fill="#A9A9A9" />
-                  </svg>
-                </span>
+              <button class="minus-icon" type="button" name="minus">
+                <svg width="12" height="3" viewBox="0 0 12 3" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="12" height="3" />
+                </svg>
               </button>
               <input class="finding-icon" type="text" name="amount-child" value="0" id="child" />
-              <button type="button" name="plus">
-                <span class="plus-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
-                      fill="#A9A9A9" />
-                  </svg>
-                </span>
+              <button class="plus-icon" type="button" name="plus">
+                <svg width="11" height="11" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" />
+                </svg>
               </button>
             </div>
           </div>
@@ -201,7 +189,7 @@
       </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer index--footer">
       <p class="contacts">
         <span>#visitsedona</span>
         <a class="contacts-phone" href="tel:+74956660166">Тел: +7 (495) 666-01-66</a>
