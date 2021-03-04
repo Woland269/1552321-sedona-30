@@ -175,11 +175,22 @@ body {
 /* welcome */
 
 .welcome {
-  padding: 77px 0 88px 0;
+  padding: 77px 0 72px 0;
   background-image: url("../img/background-photo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.welcome::before {
+  content: "";
+  position: absolute;
+  width: 1200px;
+  height: 57px;
+  background-image: url("../img/decor.svg");
+  bottom: 0;
+  top: 508px;
+  left: 0;
 }
 
 /* about us */
@@ -217,7 +228,7 @@ body {
   font-weight: 700;
   padding: 0;
   width: 470px;
-  margin: 0 auto 44px auto;
+  margin: 16px auto 44px auto;
 }
 
 .description-about {
@@ -380,7 +391,11 @@ body {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  display: no
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .interested-item {
@@ -428,32 +443,35 @@ body {
   outline: 2px solid var(--darken-border-grey);
 }
 
-.arrival-date__link,
-.date-departure__link {
-  position: relative;
-  top: 5px;
-  left: 85px;
-}
-
-.arrival-date__link::before,
-.date-departure__link::before {
+.arrival-date__link {
   content: "";
   position: absolute;
+  width: 21px;
+  height: 23px;
   right: 0;
-  top: 0;
-  width: 114px;
-  height: 30px;
-  background-image: url("../img/calendar.svg");
-  background-repeat: no-repeat;  
+  top: 62px;
+  left: 483px;
+  fill: var(--icon-gray);
 }
 
-.arrival-date__link:hover::before,
-.date-departure__link:hover:before {
+.date-departure__link {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 23px;
+  right: 0;
+  top: 129px;
+  left: 483px;
+  fill: var(--icon-gray);
+}
+
+.arrival-date__link:hover,
+.date-departure__link:hover {
   fill: var(--basic-black);
 }
 
-.arrival-date__link:active::before,
-.date-departure__link:active:before {
+.arrival-date__link:active,
+.date-departure__link:active {
   fill: var(--basic-blue);
 }
 
