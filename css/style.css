@@ -467,7 +467,9 @@ body {
 }
 
 .arrival-date__link:hover,
-.date-departure__link:hover {
+.date-departure__link:hover,
+.arrival-date__link:focus,
+.date-departure__link:focus {
   fill: var(--basic-black);
 }
 
@@ -532,7 +534,9 @@ body {
 }
 
 .minus-icon:hover,
-.plus-icon:hover {
+.plus-icon:hover,
+.minus-icon:focus,
+.plus-icon:focus {
   fill: var(--basic-black);
 }
 
@@ -565,6 +569,11 @@ body {
 .search-button:active {
   background-color: var(--active-on-blue-button);
   color: var(--basic-white-03);
+}
+
+/*modal*/
+.modal-show {
+  display: block;
 }
 
 /* finding */
@@ -973,6 +982,10 @@ all-hotels img {
   display: flex;
 }
 
+.hotel-titles:focus {
+  color: var(--basic-blue);
+}
+
 .hotels-titles__link {
   margin: 0;
   padding: 0;
@@ -1206,7 +1219,8 @@ all-hotels img {
   background-image: url("../img/icon-yt.svg");
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--hover-on-blue-button);
 }
 
@@ -1236,7 +1250,8 @@ all-hotels img {
   fill: var(--basic-grey-darken);
 }
 
-.footer-copyright:hover {
+.footer-copyright:hover,
+.footer-copyright:focus {
   color: var(--basic-blue);
   fill: var(--basic-blue);
 }
