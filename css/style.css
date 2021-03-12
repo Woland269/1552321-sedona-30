@@ -1250,13 +1250,11 @@ all-hotels img {
   fill: var(--basic-grey-darken);
 }
 
-.footer-copyright:hover,
+.footer-copyright :hover,
 .footer-copyright:focus {
-  color: var(--basic-blue);
   fill: var(--basic-blue);
 }
 
 .footer-copyright:active {
-  color: var(--basic-grey);
   fill: var(--basic-grey);
 }
