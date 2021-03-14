@@ -1250,11 +1250,27 @@ all-hotels img {
   fill: var(--basic-grey-darken);
 }
 
-.footer-copyright :hover,
+.footer-copyright:hover,
 .footer-copyright:focus {
   fill: var(--basic-blue);
 }
 
 .footer-copyright:active {
   fill: var(--basic-grey);
+}
+
+
+.search-hotel-clicked {
+  display: none;
+}
+
+.animation-modal {
+  animation-name: dropping-two;
+}
+
+@keyframes dropping-two {
+  100% {
+    transform-origin: top;
+    top:86px;
+  }
 }
