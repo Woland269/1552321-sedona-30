@@ -811,6 +811,16 @@ body {
   left: 5px;
 }
 
+.checkbox-on input:focus ~ span::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  border-radius: 15%;
+  outline: 2px solid var(--basic-black);
+}
+
 /* infrastructure */
 
 .infrastructure {
